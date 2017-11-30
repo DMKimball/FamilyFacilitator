@@ -1,4 +1,4 @@
-_// header
+// header
 var notification_num = 0;
 
 //variable to store new attendees to events
