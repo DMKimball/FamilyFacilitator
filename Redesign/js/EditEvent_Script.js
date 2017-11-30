@@ -1,4 +1,4 @@
-// header
+_// header
 var notification_num = 0;
 
 //variable to store new attendees to events
@@ -287,7 +287,7 @@ $(document).ready(
 			if ("ga" in window){
 				tracker = ga.getAll()[0];
 				if(tracker){
-					tracker.send('event','create_event_cancel','click');
+					tracker.send('event','edit_event_cancel','click');
 				}
 			}
 			window.location.href = "TodaysEvents.html";
