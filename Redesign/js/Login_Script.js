@@ -18,9 +18,10 @@ $(document).ready(function() {
 			cont.sort(contactComp);
 			//restore contacts with user at the top
 			localStorage.setItem('contacts', JSON.stringify(cont));
-			localStorage.setItem('username', $('#username_field').val());
-			localStorage.setItem('email', $('#email_field').val());
 		}
+
+		localStorage.setItem('username', $('#username_field').val());
+		localStorage.setItem('email', $('#email_field').val());
 		window.location.href = "TodaysEvents.html";
 	}
 	//loadFakeEvents();
