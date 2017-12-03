@@ -265,8 +265,10 @@ $(document).ready(
 
     var shownDate = new Date(localStorage.getItem("dateShown_t"));
     var hours_str = (shownDate.getHours() < 10) ? "0" + shownDate.getHours() : "" + shownDate.getHours();
-    var defaultStart = shownDate.getFullYear() + "-" + (shownDate.getMonth()+1) + "-" + shownDate.getDate() + "T" + hours_str + ":00";
-    var defaultEnd = shownDate.getFullYear() + "-" + (shownDate.getMonth()+1) + "-" + shownDate.getDate() + "T" + hours_str + ":30";
+    var date_str = (shownDate.getDate() < 10) ? "0" + shownDate.getDate() : "" + shownDate.getDate();
+    var month_str = (shownDate.getMonth() < 9) ? "0" + (shownDate.getMonth()+1) : "" + (shownDate.getMonth()+1);
+    var defaultStart = shownDate.getFullYear() + "-" + month_str + "-" + date_str + "T" + hours_str + ":00";
+    var defaultEnd = shownDate.getFullYear() + "-" + month_str + "-" + date_str + "T" + hours_str + ":30";
 
     $('#start_time_create').val(defaultStart);
     $('#end_time_create').val(defaultEnd);
