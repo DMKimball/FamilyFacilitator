@@ -261,7 +261,7 @@ function addRecipient(event) {
 
 $(document).ready(
 	function() {
-    show_alternate = true;//JSON.parse(localStorage.getItem("show_alternate"));
+    show_alternate = JSON.parse(localStorage.getItem("show_alternate"));
 
     if(!show_alternate || show_alternate == null) {
       show_alternate = false;
